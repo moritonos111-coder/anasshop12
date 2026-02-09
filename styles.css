@@ -1,0 +1,149 @@
+/* --- Styles Généraux --- */
+body {
+background-color: #050505;
+color: white;
+font-family: 'Arial Black', sans-serif;
+margin: 0;
+scroll-behavior: smooth;
+overflow-x: hidden;
+}
+
+.container {
+padding: 20px;
+max-width: 1200px;
+margin: auto;
+}
+
+/* --- HERO SECTION (Design Cassé) --- */
+.hero {
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background: radial-gradient(circle, #222 0%, #000 100%);
+position: relative;
+/* Design de la cassure */
+clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+border-bottom: 5px solid #333;
+}
+
+.logo-circle {
+width: 200px;
+height: 200px;
+border-radius: 50%;
+border: 5px solid #fff;
+overflow: hidden;
+transition: transform 0.5s ease;
+box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.logo-circle img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* Écriture sous le logo */
+.hero-text {
+margin-top: 20px;
+font-size: 1.5rem;
+letter-spacing: 5px;
+color: white;
+text-transform: uppercase;
+text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* --- Grille Produits --- */
+.product-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+padding: 60px 0;
+}
+
+/* --- CARTE PRODUIT + ANIMATION --- */
+.product-card {
+background: #111;
+padding: 15px;
+text-align: center;
+border: 1px solid #333;
+transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-card img {
+width: 100%;
+height: auto;
+transition: transform 0.4s ease;
+}
+
+/* Animation au survol */
+.product-card:hover {
+transform: translateY(-10px);
+border-color: #fff;
+box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+}
+
+.product-card:hover img {
+transform: scale(1.05);
+}
+
+/* Couleurs des prix */
+.price {
+font-size: 1.2rem;
+color: #fff;
+font-weight: bold;
+margin-top: 10px;
+}
+
+/* --- Formulaire Stylé --- */
+.order-form {
+background: #111;
+padding: 40px;
+margin-top: 50px;
+border: 1px solid #444;
+clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+}
+
+.order-form input, .order-form textarea {
+width: 100%;
+padding: 15px;
+margin: 10px 0;
+background: #000;
+border: 1px solid #555;
+color: white;
+font-family: sans-serif;
+}
+
+.submit-btn {
+width: 100%;
+padding: 20px;
+background: white;
+color: black;
+font-weight: bold;
+border: none;
+cursor: pointer;
+text-transform: uppercase;
+transition: background 0.3s;
+}
+
+.submit-btn:hover {
+background: #ccc;
+}
+
+/* --- Bouton WhatsApp --- */
+.whatsapp-float {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #25d366;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+z-index: 100;
+}
+
